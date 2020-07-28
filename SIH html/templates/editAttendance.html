@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Attendance</title>
+</head>
+<body>
+    <div class="change-attr">
+        <table style="width: 80%;">
+            <tr>
+                <th>Checkbox</th>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+            <form action="{{ url_for('submit_attendance') }}">
+                {% for i in range(len) %}
+                <tr>
+                    <td>
+                        <input type="checkbox" name="attendance" value="{{ student_record['UID'][i] }}">
+                    </td>
+                    <td>
+                        <img src="{{ student_record['Image'][i] }}" alt="">
+                    </td>
+                    <td>
+                        {{ student_record['Name'][i] }}
+                    </td>
+                    <td>
+                        {{ student_record['Age'][i] }}
+                    </td>
+                </tr>
+                {% endfor %}
+                <tr>
+                    <td><button type="submit">Submit</button></td>
+                </tr>    
+            </form>
+        </table>
+    </div>
+</body>
+</html>
