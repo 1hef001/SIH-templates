@@ -1,0 +1,21 @@
+{
+    "attendance": [
+        {
+            "age": 19,
+            "attendance": "y",
+            "id": "139AF",
+            "image": "https://i.pinimg.com/564x/87/7b/85/877b859374fdfa86da33ee1f15b4eed5.jpg",
+            "name": "Ash",
+            "timestamp": "23-07-2020T12:15:58"
+        },
+        {
+            "age": 21,
+            "attendance": "y",
+            "id": "169BD",
+            "image": "https://i.pinimg.com/564x/8f/ae/64/8fae64077c20c981e9b1dc5975e528eb.jpg",
+            "name": "Vis",
+            "timestamp": "23-07-2020T12:15:58" 
+        }
+    ],
+    "cci": "someStringHere"
+}

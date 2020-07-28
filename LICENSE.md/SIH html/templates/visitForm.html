@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Visits</title>
+</head>
+<body>
+    <div class="visitForm">
+        <form action="{{ url_for('schedule_visit') }}">
+            <h3>Guardian Visit form</h3>
+            <hr><br><br>
+            <label for="guardian-name">Guardian Name : </label>
+            <input type="text" id="guardian-name" name="guardian-name" required>
+            <br><br>
+            <label for="guardian-id">Guardian's Unique ID : </label>
+            <input type="text" id="guardian-id" name="guardian-id" required>
+            <br><br>
+            <label for="date">Date : </label>
+            <input type="date" id="date" name="date" required>
+            <br><br>
+            <label for="start-time" >Start Time : </label>
+            <input type="time" id="start-time" name="start-time" required>
+            <br><br>
+            <label for="stop-time">Stop Time : </label>
+            <input type="time" id="stop-time" name="stop-time" required>
+            <br><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <footer style="display: block;">
+        <p style="color:red">* All the fields are necessary and must be filled out properly</p>
+    </footer>
+</body>
+</html>
