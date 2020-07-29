@@ -4,6 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Schedule Visits</title>
+<style>
+body {
+   background-color:#E5E7E9;
+    }
+.container {
+  width: 200px;
+  margin: 0 auto;
+  height: auto;
+  border: 3px solid #000000;
+  border-radius: 0.5em;
+  padding: 50px;
+  justify-content: "center";
+  align-content: "center";
+}
+label,
+input {
+  display: block;
+  width: 200px;
+  float: left;
+  margin-bottom: 10px;
+}
+button {
+  margin: 10px;
+  width: 70px;
+  padding-inline-start: 10px;
+  height: auto;
+  margin-left: 60px;
+}
+
+</style>
 </head>
 <body>
     <div class="visitForm">
@@ -15,6 +45,7 @@
             </div>
             <h3>Guardian Visit form</h3>
             <hr><br><br>
+            <div class="container">
             <label for="guardian-name">Guardian Name : </label>
             <input type="text" id="guardian-name" name="guardian-name" required>
             <br><br>
@@ -30,7 +61,8 @@
             <label for="stop-time">Stop Time : </label>
             <input type="time" id="stop-time" name="stop-time" required>
             <br><br>
-            <button type="submit">Submit</button>
+            <div class="button">
+                    <button type="submit">Submit</button></div></div>
         </form>
     </div>
     <footer style="display: block;">
