@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 from helper import load_records, assignAttendance, displayPresent, visitJson
 import os
+from facerecognition import init_video_record, close_recording
 
 app = Flask(__name__)
 
@@ -19,6 +20,7 @@ def init_start_attendance():
         message = 'Face Recognition is already running'
     else:
         BOOL = True
+        init_video_record()
         message = 'Face Recognition has started'
     
     flash(message)
@@ -31,6 +33,7 @@ def init_stop_attendance():
         message = 'Face Recognition is not running'
     else:
         BOOL = False
+        close_recording()
         message = 'Face Recognition was stopped'
     
     flash(message)
