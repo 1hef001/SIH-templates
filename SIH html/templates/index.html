@@ -4,6 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Face Recognition - Attendance</title>
+<style>
+        body {
+            background-color:#E5E7E9;
+            }
+         .container {
+            width: 200px;
+            margin: auto;
+            margin-top: 50px;
+
+            height: auto;
+            border: 3px solid #000000;
+            border-radius: 0.5em;
+            padding: 100px;
+            justify-content: "center";
+            align-content: "center";
+            }
+</style>
 </head>
 <body>
     <div>
@@ -20,10 +37,11 @@
             {% endif %}
         {% endwith %}
     </div>
+    <div class="container">
     <div>
         <form action="./start-attendance">
             <a href="{{ url_for('init_start_attendance') }}">
-                <button>Start Attendance</button>
+                <button style="height: 50px; width: 100px; margin-left:50px">Start Attendance</button>
             </a>
         </form>
     </div>
@@ -31,7 +49,7 @@
     <div>
         <form action="./stop-attendance">
             <a href="{{ url_for('init_stop_attendance') }}">
-                <button>Stop Attendance</button>
+                <button style="height: 50px; width: 100px; margin-left:50px">Stop Attendance</button>
             </a>
         </form>
     </div>
@@ -39,7 +57,7 @@
     <div>
         <form action="./edit-attendance">
             <a href="{{ url_for('init_edit_attendance') }}">
-                <button>Edit Attendance</button>
+                <button style="height: 50px; width: 100px; margin-left:50px">Edit Attendance</button>
             </a>
         </form>
     </div>
@@ -47,9 +65,10 @@
     <div>
         <form action="./schedule-visit">
             <a href="{{ url_for('init_schedule_visit') }}">
-                <button>Schedule Guardian visit</button>
+                <button style="height: 50px; width: 100px; margin-left:50px">Schedule Guardian visit</button>
             </a>
         </form>
+    </div>
     </div>
 </body>
 </html>
