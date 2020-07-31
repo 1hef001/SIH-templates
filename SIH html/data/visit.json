@@ -1,10 +1,7 @@
 {
-    "bio": "SomeDictHere",
-    "visitData": {
-        "date": "4566-03-12",
-        "guardian-id": "qwe123",
-        "guardian-name": "qwe",
-        "start-time": "18:00",
-        "stop-time": "20:00"
-    }
+    "date": "2020-12-20",
+    "guardian-id": "qwe123",
+    "guardian-name": "qwe",
+    "start-time": "18:00",
+    "stop-time": "20:00"
 }

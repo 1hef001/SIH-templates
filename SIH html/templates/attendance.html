@@ -46,13 +46,13 @@ td img{
                 {% for i in range(len) %}
                 <tr>
                     <td>
-                        <img src="{{ student_record['Image'][i] }}" alt="">
+                        <img src="{{ student_record['image'][i] }}" alt="">
                     </td>
                     <td>
-                        {{ student_record['Name'][i] }}
+                        {{ student_record['name'][i] }}
                     </td>
                     <td>
-                        {{ student_record['Age'][i] }}
+                        {{ student_record['age'][i] }}
                     </td>
                 </tr>
                 {% endfor %}    

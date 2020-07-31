@@ -1,9 +1,12 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
-from helper import load_records, assignAttendance, displayPresent, visitJson
 import os
+
+from data.lib.programUtils import Attendance, FetchAPIData
+# load_records, assignAttendance, displayPresent, visitJson, postAttendance
 from facerecognition import init_video_record, close_recording
 
 app = Flask(__name__)
+
 
 # <--- Main --->
 att_list = []
@@ -43,18 +46,18 @@ def init_stop_attendance():
 @app.route('/edit-attendance/', methods=['GET', 'POST'])
 def init_edit_attendance():
     # print(name)
-    student_record = load_records('students.csv')
+    student_record = Attendance.load_records()
     # print(student_record)
-    return render_template('editAttendance.html', student_record=student_record, len=len(student_record['Name']))
+    return render_template('editAttendance.html', student_record=student_record, len=len(student_record['name']))
 
 @app.route('/edit-attendance/submit', methods=['GET', 'POST'])
 def submit_attendance():
     global att_list
     att_list = request.args.getlist('attendance')
-    records = displayPresent('students.csv', uids=att_list)
-    assignAttendance('students.csv', uids=att_list)
+    records = Attendance.displayPresent(att_list)
+    Attendance.assignAttendance(att_list)
     # returnJson('students.csv', att_list)
-    return render_template('attendance.html', student_record=records, len=len(records['Name']))
+    return render_template('attendance.html', student_record=records, len=len(records['name']))
 
 @app.route('/schedule-visit/', methods=['GET', 'POST'])
 def init_schedule_visit():
@@ -63,7 +66,7 @@ def init_schedule_visit():
 @app.route('/schedule-visit/confirm', methods=['GET', 'POST'])
 def schedule_visit():
     args = request.args.to_dict()
-    visitJson(args)
+    Attendance.visitJson(args)
     flash('Visit Scheduled')
     return redirect(url_for('index'))
 

@@ -35,7 +35,7 @@ def markAttendance(name):
 
 def init_video_record():
     firebase= firebase.FirebaseApplication("https://attendancetest-82e40.firebaseio.com/", None)
-    path = 'ImagesAttendance'
+    path = './data/assets'
     images = []
     classNames = []
     myList = os.listdir(path)

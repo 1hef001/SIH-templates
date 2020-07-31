@@ -1,0 +1,17 @@
+{
+    "attendance": [
+        {
+            "attendance": "y",
+            "id": "139AF",
+            "name": "Ash",
+            "timestamp": "2020-07-30T21:42:50"
+        },
+        {
+            "attendance": "y",
+            "id": "169BD",
+            "name": "Vis",
+            "timestamp": "2020-07-30T21:42:50"
+        }
+    ],
+    "cci": "someStringHere"
+}
